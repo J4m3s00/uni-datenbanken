@@ -1,3 +1,11 @@
+-- Aufgabe 3
+DROP TABLE Belegungen;
+DROP TABLE Noten;
+DROP TABLE Klausuren;
+
+
+
+-- Aufgabe 2
 DROP TABLE ModulStudienordnung;
 DROP TABLE Studienordnung;
 DROP TABLE Studiengang;
