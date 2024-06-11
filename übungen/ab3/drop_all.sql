@@ -1,3 +1,9 @@
+DROP TABLE ModulStudienordnung;
+DROP TABLE Studienordnung;
+DROP TABLE Studiengang;
+DROP TABLE Fachbereich;
+
+-- Aufgabe 1
 
 DROP TABLE KursBt;
 DROP TABLE Kurs;
