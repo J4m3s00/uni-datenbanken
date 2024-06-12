@@ -20,7 +20,7 @@ VALUES (1, 2), (2, 2);
 
 -- Insert data into Kurs
 INSERT INTO Kurs (KID, SID, MID)
-VALUES (1, 1, 1);
+VALUES (1, 2, 1);
 
 -- Insert data into Raum
 INSERT INTO Raum (RID, RaumNr)
@@ -49,7 +49,7 @@ INSERT INTO Zeitblock (ZBID, UhrzeitVon, UhrzeitBis)
 VALUES (1, TO_DATE('09:45', 'HH24:MI'), TO_DATE('11:15', 'HH24:MI')), (2, TO_DATE('12:00', 'HH24:MI'), TO_DATE('13:30', 'HH24:MI'));
 
 -- Insert data into Tag
-INSERT INTO Tag (TID, Bez)
+INSERT INTO Tag (TAGID, Bez)
 VALUES (1, 'Mittwoch'), (2, 'Mittwoch');
 
 INSERT INTO KursBT (KBTID, KID, MBTID, RID, TID, ZBID)
