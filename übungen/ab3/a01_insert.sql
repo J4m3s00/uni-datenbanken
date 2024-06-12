@@ -15,8 +15,8 @@ INSERT INTO ModulBTArt (MBAID, Bez, Aktiv, LfdNr)
 VALUES (1, 'SL', TRUE, 1), (2, 'PCÜ', TRUE, 2);
 
 -- Insert data into ModulBT
-INSERT INTO ModulBT (MBTID, SWS)
-VALUES (1, 2), (2, 2);
+INSERT INTO ModulBT (MBTID, SWS, MID, MBAID)
+VALUES (1, 2, 1, 1), (2, 2, 1, 2);
 
 -- Insert data into Kurs
 INSERT INTO Kurs (KID, SID, MID)
@@ -32,14 +32,14 @@ VALUES (1, 'Vorlesung'), (2, 'Übung');
 
 -- Insert data into Termin
 INSERT INTO Termin (TID, TAID)
-VALUES (1, 1), (2, 2);
-
+VALUES (1, 1), (2, 2), (3, 2);
 
 
 -- Insert data into Einzeltermin
 INSERT INTO Einzeltermin (ETID, TID, DatumUhrzeitVon, DatumUhrzeitBis)
 VALUES (1, 1, TO_DATE('2024-04-01 09:45', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 11:45', 'YYYY-MM-DD HH24:MI')), 
-       (2, 2, TO_DATE('2024-04-01 12:00', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 13:30', 'YYYY-MM-DD HH24:MI'));
+       (2, 2, TO_DATE('2024-04-01 12:00', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 13:30', 'YYYY-MM-DD HH24:MI')),
+       (3, 3, TO_DATE('2024-04-01 14:00', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 15:30', 'YYYY-MM-DD HH24:MI'));
 
 -- Insert data into Zeitblock
 INSERT INTO Zeitblock (ZBID, UhrzeitVon, UhrzeitBis)
@@ -108,6 +108,6 @@ VALUES
 (1, 1, 1, 1, 1, 1), 
 (2, 1, 1, 1, 2, 2), 
 (3, 1, 2, 2, 1, 1), 
-(4, 1, 2, 2, 1, 1), 
-(5, 1, 2, 2, 2, 2), 
-(6, 1, 2, 2, 2, 1);
+(4, 1, 2, 2, 2, 1), 
+(5, 1, 2, 2, 3, 2), 
+(6, 1, 2, 2, 3, 1);

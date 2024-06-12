@@ -5,7 +5,7 @@ CREATE TABLE Belegungen (
     Status VARCHAR(50),
     StudierendenID INT,
     KursID INT,
-    FOREIGN KEY (StudierendenID) REFERENCES StudentIn(PRID),
+    FOREIGN KEY (StudierendenID) REFERENCES StudentIn(STUID),
     FOREIGN KEY (KursID) REFERENCES Kurs(KID)
 );
 
@@ -26,8 +26,8 @@ CREATE TABLE Noten (
     Versuch INT,
     LehrpersonID INT,
     FOREIGN KEY (KlausurID) REFERENCES Klausuren(KlausurID),
-    FOREIGN KEY (StudierendenID) REFERENCES StudentIn(PRID),
-    FOREIGN KEY (LehrpersonID) REFERENCES Lehrperson(PRID)
+    FOREIGN KEY (StudierendenID) REFERENCES StudentIn(STUID),
+    FOREIGN KEY (LehrpersonID) REFERENCES Lehrperson(LID)
 );
 
 -- Insert data into Belegungen

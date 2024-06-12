@@ -36,10 +36,10 @@ DROP TABLE Modulart;
 DROP TABLE Raum;
 
 
+
 DROP TABLE Einzeltermin;
 DROP TABLE Wochentermin;
 DROP TABLE Termin;
 DROP TABLE Terminart;
 DROP TABLE Zeitblock;
 DROP TABLE Tag;
-
