@@ -40,9 +40,6 @@ VALUES (1, 1), (2, 2);
 INSERT INTO Einzeltermin (ETID, TID, DatumUhrzeitVon, DatumUhrzeitBis)
 VALUES (1, 1, TO_DATE('2024-04-01 09:45', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 11:45', 'YYYY-MM-DD HH24:MI')), 
        (2, 2, TO_DATE('2024-04-01 12:00', 'YYYY-MM-DD HH24:MI'), TO_DATE('2024-04-01 13:30', 'YYYY-MM-DD HH24:MI'));
--- Insert data into Wochentermin
-INSERT INTO Wochentermin (TID)
-VALUES (1), (2);
 
 -- Insert data into Zeitblock
 INSERT INTO Zeitblock (ZBID, UhrzeitVon, UhrzeitBis)
@@ -52,14 +49,10 @@ VALUES (1, TO_DATE('09:45', 'HH24:MI'), TO_DATE('11:15', 'HH24:MI')), (2, TO_DAT
 INSERT INTO Tag (TAGID, Bez)
 VALUES (1, 'Mittwoch'), (2, 'Mittwoch');
 
-INSERT INTO KursBT (KBTID, KID, MBTID, RID, TID, ZBID)
-VALUES 
-(1, 1, 1, 1, 1, 1), 
-(2, 1, 1, 1, 2, 2), 
-(3, 1, 2, 2, 1, 1), 
-(4, 1, 2, 2, 1, 2), 
-(5, 1, 2, 2, 2, 1), 
-(6, 1, 2, 2, 2, 2);
+-- Insert data into Wochentermin
+INSERT INTO Wochentermin (TID, ZBID, TAGID)
+VALUES (1, 1, 1), (2, 2, 2);
+
 
 -- Insert data into Person
 INSERT INTO Person (PID, Name)
@@ -77,14 +70,16 @@ VALUES
 (4, 4, 2, TO_DATE('2024-04-01', 'YYYY-MM-DD'), TO_DATE('2024-09-30', 'YYYY-MM-DD'));
 
 -- Insert data into StudentIn
-INSERT INTO StudentIn (PRID, MatrNr)
+INSERT INTO StudentIn (STUID, PRID, MatrNr)
 VALUES 
-(3, 's0586296'), 
-(4, 's0653829');
+(1, 3, 's0586296'), 
+(2, 4, 's0653829'),
+(3, 5, 's0753829'),
+(4, 6, 's0853829');
 
 -- Insert data into Lehrperson
-INSERT INTO Lehrperson (PRID, Steuernummer)
-VALUES (1, 'ST123456'), (2, 'ST789012');
+INSERT INTO Lehrperson (LID, PRID, Steuernummer)
+VALUES (1, 1, 'ST123456'), (2, 2, 'ST789012');
 
 
 INSERT INTO Personenrolle (PRID, PID, RID, DatumBeginn, DatumEnde)
@@ -102,3 +97,17 @@ VALUES
 -- Insert data into Sonstige
 INSERT INTO Sonstige (PRID)
 VALUES (5);
+
+-- Insert Studentin in kurs
+INSERT INTO StudentInKurs (STUID, KID) 
+VALUES (1, 1), (2, 1), (3, 1), (4, 1);
+
+-- Insert Kurs
+INSERT INTO KursBT (KBTID, KID, MBTID, RID, TID, LID)
+VALUES 
+(1, 1, 1, 1, 1, 1), 
+(2, 1, 1, 1, 2, 2), 
+(3, 1, 2, 2, 1, 1), 
+(4, 1, 2, 2, 1, 1), 
+(5, 1, 2, 2, 2, 2), 
+(6, 1, 2, 2, 2, 1);

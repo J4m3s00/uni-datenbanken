@@ -13,6 +13,15 @@ DROP TABLE Fachbereich;
 
 -- Aufgabe 1
 
+DROP TABLE StudentInKurs;
+DROP TABLE StudentIn;
+DROP TABLE Lehrperson;
+DROP TABLE Sonstige;
+DROP TABLE Personenrolle;
+DROP TABLE Person;
+DROP TABLE Rolle;
+
+
 DROP TABLE KursBt;
 DROP TABLE Kurs;
 DROP TABLE Semester;
@@ -34,10 +43,3 @@ DROP TABLE Terminart;
 DROP TABLE Zeitblock;
 DROP TABLE Tag;
 
-
-DROP TABLE StudentIn;
-DROP TABLE Lehrperson;
-DROP TABLE Sonstige;
-DROP TABLE Personenrolle;
-DROP TABLE Person;
-DROP TABLE Rolle;
