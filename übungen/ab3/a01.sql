@@ -144,3 +144,5 @@ CREATE TABLE Sonstige (
     -- Additional attributes here
     FOREIGN KEY (PRID) REFERENCES Personenrolle(PRID)
 );
+
+
