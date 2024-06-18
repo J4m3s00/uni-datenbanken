@@ -14,6 +14,11 @@ DROP TABLE Fachbereich;
 -- Aufgabe 1
 
 DROP TABLE StudentInKurs;
+
+DROP TABLE KursBt;
+DROP TABLE Kurs;
+DROP TABLE Semester;
+
 DROP TABLE StudentIn;
 DROP TABLE Lehrperson;
 DROP TABLE Sonstige;
@@ -22,9 +27,6 @@ DROP TABLE Person;
 DROP TABLE Rolle;
 
 
-DROP TABLE KursBt;
-DROP TABLE Kurs;
-DROP TABLE Semester;
 
 DROP TABLE ModulBT;
 DROP TABLE ModulBTArt;

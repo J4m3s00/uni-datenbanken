@@ -37,8 +37,8 @@ VALUES (1, 1, 'Angenommen', 3, 1),
 
 -- Insert data into Klausuren
 INSERT INTO Klausuren (KlausurID, ModulID, Zeitpunkt, Anmeldung)
-VALUES (1, 1, '2024-06-30 09:00:00', TRUE),
-       (2, 2, '2024-09-26 09:45:00', FALSE);
+VALUES (1, 1, TO_DATE('2024-06-30 09:00', 'YYYY-MM-DD HH:MI'), TRUE),
+       (2, 1, TO_DATE('2024-09-26 09:45', 'YYYY-MM-DD HH:MI'), FALSE);
 
 -- Insert data into Noten
 INSERT INTO Noten (KlausurID, StudierendenID, Note, Versuch, LehrpersonID)
