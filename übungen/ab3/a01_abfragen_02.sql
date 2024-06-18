@@ -1,9 +1,27 @@
-SELECT MATRNR as MatrikelNr, PERSON.NAME, PERSONENROLLE.DATUMBEGINN, PERSONENROLLE.DATUMENDE, ROLLE.BEZ, NULL as STUERNUMMER FROM STUDENTIN 
-JOIN PERSONENROLLE on PERSONENROLLE.PRID = STUDENTIN.PRID
-JOIN PERSON on PERSON.PID = PERSONENROLLE.PID
-JOIN ROLLE on ROLLE.RID = PERSONENROLLE.RID
-UNION
-SELECT NULL, PERSON.NAME, PERSONENROLLE.DATUMBEGINN, PERSONENROLLE.DATUMENDE, ROLLE.BEZ, LEHRPERSON.STEUERNUMMER FROM LEHRPERSON 
-JOIN PERSONENROLLE on PERSONENROLLE.PRID = LEHRPERSON.PRID
-JOIN PERSON on PERSON.PID = PERSONENROLLE.PID
-JOIN ROLLE on ROLLE.RID = PERSONENROLLE.RID;
+select matrnr as matrikelnr,
+       person.name,
+       personenrolle.datumbeginn,
+       personenrolle.datumende,
+       rolle.bez,
+       null as stuernummer
+  from studentin
+  join personenrolle
+on personenrolle.prid = studentin.prid
+  join person
+on person.pid = personenrolle.pid
+  join rolle
+on rolle.rid = personenrolle.rid
+union
+select null,
+       person.name,
+       personenrolle.datumbeginn,
+       personenrolle.datumende,
+       rolle.bez,
+       lehrperson.steuernummer
+  from lehrperson
+  join personenrolle
+on personenrolle.prid = lehrperson.prid
+  join person
+on person.pid = personenrolle.pid
+  join rolle
+on rolle.rid = personenrolle.rid;
